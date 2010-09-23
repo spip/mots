@@ -1,0 +1,26 @@
+* text=auto !eol
+action/editer_mot.php -text
+action/editer_mots.php -text
+action/instituer_groupe_mots.php -text
+action/supprimer_mot.php -text
+base/mots.php -text
+base/mots_upgrade.php -text
+configuration/mots.php -text
+exec/editer_mots.php -text
+exec/mots_edit.php -text
+exec/mots_tous.php -text
+exec/mots_type.php -text
+inc/editer_mots.php -text
+inc/mots.php -text
+/mots_autoriser.php -text
+/mots_pipelines.php -text
+/plugin.xml -text
+prive/editer/groupe_mot.html -text
+prive/editer/mot.html -text
+prive/formulaires/editer_groupe_mot.html -text
+prive/formulaires/editer_groupe_mot.php -text
+prive/formulaires/editer_mot.html -text
+prive/formulaires/editer_mot.php -text
+prive/listes/mots-admin.html -text
+prive/listes/mots-admin_fonctions.php -text
+prive/listes/mots.html -text
