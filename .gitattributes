@@ -6,11 +6,12 @@ action/instituer_groupe_mots.php -text
 action/supprimer_mot.php -text
 base/mots.php -text
 base/mots_upgrade.php -text
-configuration/mots.php -text
 exec/editer_mots.php -text
 exec/mots_edit.php -text
 exec/mots_tous.php -text
 exec/mots_type.php -text
+formulaires/configurer_mots.html -text
+formulaires/configurer_mots.php -text
 formulaires/editer_groupe_mot.html -text
 formulaires/editer_groupe_mot.php -text
 formulaires/editer_mot.html -text
