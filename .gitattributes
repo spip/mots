@@ -26,6 +26,7 @@ prive/editer/mot.html -text
 prive/listes/mots-admin.html -text
 prive/listes/mots-admin_fonctions.php -text
 prive/listes/mots.html -text
+prive/listes/mots_associer-select.html -text
 prive/listes/mots_associer.html -text
 prive/listes/mots_lies.html -text
 urls/generer_url_ecrire_mot.php -text
