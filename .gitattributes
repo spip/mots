@@ -5,7 +5,6 @@ action/supprimer_groupe_mots.php -text
 action/supprimer_mot.php -text
 base/mots.php -text
 base/mots_upgrade.php -text
-exec/mots_tous.php -text
 formulaires/configurer_mots.html -text
 formulaires/configurer_mots.php -text
 formulaires/editer_groupe_mot.html -text
@@ -32,6 +31,7 @@ prive/squelettes/contenu/groupe_mots.html -text
 prive/squelettes/contenu/groupe_mots_edit.html -text
 prive/squelettes/contenu/mot.html -text
 prive/squelettes/contenu/mot_edit.html -text
+prive/squelettes/contenu/mots.html -text
 prive/squelettes/hierarchie/groupe_mots.html -text
 prive/squelettes/hierarchie/groupe_mots_edit.html -text
 prive/squelettes/hierarchie/mot.html -text
@@ -40,6 +40,7 @@ prive/squelettes/navigation/groupe_mots.html -text
 prive/squelettes/navigation/groupe_mots_edit.html -text
 prive/squelettes/navigation/mot.html -text
 prive/squelettes/navigation/mot_edit.html -text
+prive/squelettes/navigation/mots.html -text
 prive/themes/spip/images/groupe_mots-16.png -text
 prive/themes/spip/images/groupe_mots-24.png -text
 prive/themes/spip/images/groupe_mots-add-16.png -text
