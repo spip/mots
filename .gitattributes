@@ -5,7 +5,6 @@ action/instituer_groupe_mots.php -text
 action/supprimer_mot.php -text
 base/mots.php -text
 base/mots_upgrade.php -text
-exec/mots_edit.php -text
 exec/mots_tous.php -text
 exec/mots_type.php -text
 formulaires/configurer_mots.html -text
@@ -31,8 +30,11 @@ prive/listes/mots_associer-select.html -text
 prive/listes/mots_associer.html -text
 prive/listes/mots_lies.html -text
 prive/squelettes/contenu/mot.html -text
+prive/squelettes/contenu/mot_edit.html -text
 prive/squelettes/hierarchie/mot.html -text
+prive/squelettes/hierarchie/mot_edit.html -text
 prive/squelettes/navigation/mot.html -text
+prive/squelettes/navigation/mot_edit.html -text
 prive/themes/spip/images/groupe-mot-16.png -text
 prive/themes/spip/images/groupe-mot-24.png -text
 prive/themes/spip/images/groupe-mot-add-16.png -text
