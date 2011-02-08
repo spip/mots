@@ -18,8 +18,10 @@ inc/editer_mots.php -text
 /mots_autoriser.php -text
 /mots_pipelines.php -text
 /plugin.xml -text
+prive/contenu/mot.html -text
 prive/editer/groupe_mot.html -text
 prive/editer/mot.html -text
+prive/infos/mot.html -text
 prive/listes/mots-admin.html -text
 prive/listes/mots-admin_fonctions.php -text
 prive/listes/mots.html -text
@@ -28,6 +30,9 @@ prive/listes/mots_associer-select-unseul.html -text
 prive/listes/mots_associer-select.html -text
 prive/listes/mots_associer.html -text
 prive/listes/mots_lies.html -text
+prive/squelettes/contenu/mot.html -text
+prive/squelettes/hierarchie/mot.html -text
+prive/squelettes/navigation/mot.html -text
 prive/themes/spip/images/groupe-mot-16.png -text
 prive/themes/spip/images/groupe-mot-24.png -text
 prive/themes/spip/images/groupe-mot-add-16.png -text
