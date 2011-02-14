@@ -12,6 +12,8 @@ formulaires/editer_groupe_mot.php -text
 formulaires/editer_mot.html -text
 formulaires/editer_mot.php -text
 inc/editer_mots.php -text
+inc/mots.php -text
+lang/mots_fr.php -text
 /mots_autoriser.php -text
 /mots_pipelines.php -text
 /plugin.xml -text
@@ -19,6 +21,7 @@ prive/objets/contenu/groupe_mots.html -text
 prive/objets/contenu/mot.html -text
 prive/objets/infos/groupe_mots.html -text
 prive/objets/infos/mot.html -text
+prive/objets/infos/mot_fonctions.php -text
 prive/objets/liste/mots-admin.html -text
 prive/objets/liste/mots-admin_fonctions.php -text
 prive/objets/liste/mots.html -text
