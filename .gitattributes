@@ -11,7 +11,7 @@ formulaires/editer_groupe_mot.html -text
 formulaires/editer_groupe_mot.php -text
 formulaires/editer_mot.html -text
 formulaires/editer_mot.php -text
-inc/editer_mots.php -text
+formulaires/inc-choisir-groupemots-tables-liees.html -text
 inc/mots.php -text
 lang/mots_fr.php -text
 /mots_autoriser.php -text
