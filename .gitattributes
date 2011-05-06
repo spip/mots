@@ -13,6 +13,7 @@ formulaires/editer_mot.html -text
 formulaires/editer_mot.php -text
 formulaires/inc-choisir-groupemots-tables-liees.html -text
 inc/mots.php -text
+lang/mots.xml -text
 lang/mots_an.php -text
 lang/mots_ar.php -text
 lang/mots_ast.php -text
