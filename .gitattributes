@@ -4,7 +4,6 @@ action/editer_mot.php -text
 action/supprimer_groupe_mots.php -text
 action/supprimer_mot.php -text
 base/mots.php -text
-base/mots_upgrade.php -text
 formulaires/configurer_mots.html -text
 formulaires/configurer_mots.php -text
 formulaires/editer_groupe_mot.html -text
@@ -90,9 +89,9 @@ lang/mots_ty.php -text
 lang/mots_ur.php -text
 lang/mots_vi.php -text
 lang/mots_zh.php -text
+/mots_administrations.php -text
 /mots_autoriser.php -text
 /mots_pipelines.php -text
-/plugin.xml -text
 prive/objets/contenu/groupe_mots.html -text
 prive/objets/contenu/mot.html -text
 prive/objets/infos/groupe_mots.html -text
