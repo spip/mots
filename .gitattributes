@@ -105,7 +105,7 @@ prive/objets/liste/mots_associer-select-unseul.html -text
 prive/objets/liste/mots_associer-select.html -text
 prive/objets/liste/mots_associer.html -text
 prive/objets/liste/mots_lies.html -text
-prive/objets/liste/objets_lies.html -text
+prive/objets/liste/objets_lies_mot.html -text
 prive/squelettes/contenu/groupe_mots.html -text
 prive/squelettes/contenu/groupe_mots_edit.html -text
 prive/squelettes/contenu/mot.html -text
