@@ -91,6 +91,7 @@ lang/mots_ur.php -text
 lang/mots_vi.php -text
 lang/mots_zh.php -text
 lang/paquet-mots.xml -text
+lang/paquet-mots_en.php -text
 /mots_administrations.php -text
 /mots_autoriser.php -text
 /mots_pipelines.php -text
