@@ -95,6 +95,7 @@ lang/paquet-mots_en.php -text
 lang/paquet-mots_sk.php -text
 /mots_administrations.php -text
 /mots_autoriser.php -text
+/mots_ieconfig.php -text
 /mots_pipelines.php -text
 prive/objets/contenu/groupe_mots.html -text
 prive/objets/contenu/mot.html -text
