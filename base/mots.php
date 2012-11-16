@@ -30,7 +30,6 @@ function mots_declarer_tables_interfaces($interfaces){
 	$interfaces['exceptions_des_jointures']['type_mot_syndic'] = array('spip_mots', 'type');
 	$interfaces['exceptions_des_jointures']['spip_articles']['id_groupe'] = array('spip_mots', 'id_groupe');
 	$interfaces['exceptions_des_jointures']['spip_rubriques']['id_groupe'] = array('spip_mots', 'id_groupe');
-	$interfaces['exceptions_des_jointures']['spip_syndic']['id_groupe'] = array('spip_mots', 'id_groupe');
 
 	return $interfaces;
 }
@@ -72,8 +71,7 @@ function mots_declarer_tables_auxiliaires($tables_auxiliaires){
 function mots_declarer_tables_objets_sql($tables){
 	$tables['spip_mots'] = array(
 		'type'=>'mot',
-	  'type_surnoms' => array('mot-cle'), // pour les icones...
-
+		'type_surnoms' => array('mot-cle'), // pour les icones...
 		'texte_retour' => 'icone_retour',
 		'texte_objets' => 'public:mots_clefs',
 		'texte_objet' => 'public:mots_clef',
@@ -99,6 +97,7 @@ function mots_declarer_tables_objets_sql($tables){
 		),
 		'key' => array(
 			"PRIMARY KEY"	=> "id_mot",
+			"KEY id_groupe" => "id_groupe"
 		),
 		'rechercher_champs' => array(
 		  'titre' => 8, 'texte' => 1, 'descriptif' => 5
