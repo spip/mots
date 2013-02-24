@@ -132,7 +132,6 @@ prive/squelettes/navigation/groupe_mots_edit.html -text
 prive/squelettes/navigation/mot.html -text
 prive/squelettes/navigation/mot_edit.html -text
 prive/squelettes/navigation/mots.html -text
-prive/style_prive_plugin_mots.html -text
 prive/themes/spip/images/groupe_mots-16.png -text
 prive/themes/spip/images/groupe_mots-24.png -text
 prive/themes/spip/images/groupe_mots-32.png -text
