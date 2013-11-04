@@ -42,6 +42,7 @@ lang/mots_fa.php -text
 lang/mots_fi.php -text
 lang/mots_fon.php -text
 lang/mots_fr.php -text
+lang/mots_fr_fem.php -text
 lang/mots_fr_sc.php -text
 lang/mots_fr_tu.php -text
 lang/mots_gl.php -text
@@ -96,9 +97,11 @@ lang/paquet-mots_de.php -text
 lang/paquet-mots_en.php -text
 lang/paquet-mots_es.php -text
 lang/paquet-mots_fa.php -text
+lang/paquet-mots_fr_fem.php -text
 lang/paquet-mots_it.php -text
 lang/paquet-mots_lb.php -text
 lang/paquet-mots_nl.php -text
+lang/paquet-mots_pt.php -text
 lang/paquet-mots_pt_br.php -text
 lang/paquet-mots_ru.php -text
 lang/paquet-mots_sk.php -text

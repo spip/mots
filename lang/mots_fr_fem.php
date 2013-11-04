@@ -1,18 +1,20 @@
 <?php
 // This is a SPIP language file  --  Ceci est un fichier langue de SPIP
-// Fichier source, a modifier dans svn://zone.spip.org/spip-zone/_core_/plugins/mots/lang/
+// extrait automatiquement de http://trad.spip.net/tradlang_module/mots?lang_cible=fr_fem
+// ** ne pas modifier le fichier **
+
 if (!defined('_ECRIRE_INC_VERSION')) return;
 
 $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// A
 	'avis_conseil_selection_mot_cle' => '<b>Groupe important :</b> il est fortement conseillé de sélectionner un mot-clé dans ce groupe.',
-	'avis_doublon_mot_cle' => 'Un mot existe déjà avec ce titre. Êtes-vous sûr de vouloir créer le même ?',
+	'avis_doublon_mot_cle' => 'Un mot existe déjà avec ce titre. Êtes-vous sûre de vouloir créer le même ?',
 
 	// B
-	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'les administrateurs du site',
-	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'les rédacteurs',
-	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'les visiteurs du site public lorsqu’ils postent un message dans un forum.',
+	'bouton_checkbox_qui_attribue_mot_cle_administrateurs' => 'les administratrices du site',
+	'bouton_checkbox_qui_attribue_mot_cle_redacteurs' => 'les rédactrices',
+	'bouton_checkbox_qui_attribue_mot_cle_visiteurs' => 'les visiteuses du site public lorsqu’elles postent un message dans un forum.',
 
 	// C
 	'creer_et_associer_un_mot' => 'Créer et associer un mot-clé',
@@ -68,7 +70,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 		indépendamment de leur placement dans des rubriques. Vous pouvez ainsi
 		enrichir la navigation de votre site, voire utiliser ces propriétés
 		pour personnaliser la présentation des articles dans vos squelettes.',
-	'texte_mots_cles_dans_forum' => 'Souhaitez-vous permettre l’utilisation de mots-clés sélectionnables par les visiteurs dans les forums du site public ? (Attention : cette option est relativement complexe à utiliser correctement.)',
+	'texte_mots_cles_dans_forum' => 'Souhaitez-vous permettre l’utilisation de mots-clés sélectionnables par les visiteuses dans les forums du site public ? (Attention : cette option est relativement complexe à utiliser correctement.)',
 	'texte_nouveau_mot' => 'Nouveau mot',
 	'titre_config_groupe_mots_cles' => 'Configuration des groupes de mots-clés',
 	'titre_gauche_mots_edit' => 'MOT NUMÉRO :',
