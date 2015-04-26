@@ -69,7 +69,6 @@ lang/mots_oc_lms.php -text
 lang/mots_oc_lnc.php -text
 lang/mots_oc_ni.php -text
 lang/mots_oc_ni_la.php -text
-lang/mots_oc_ni_mis.php -text
 lang/mots_oc_pro.php -text
 lang/mots_oc_prv.php -text
 lang/mots_oc_va.php -text
@@ -99,11 +98,9 @@ lang/paquet-mots_en.php -text
 lang/paquet-mots_es.php -text
 lang/paquet-mots_fa.php -text
 lang/paquet-mots_fr_fem.php -text
-lang/paquet-mots_fr_tu.php -text
 lang/paquet-mots_it.php -text
 lang/paquet-mots_lb.php -text
 lang/paquet-mots_nl.php -text
-lang/paquet-mots_oc_ni_mis.php -text
 lang/paquet-mots_pt.php -text
 lang/paquet-mots_pt_br.php -text
 lang/paquet-mots_ru.php -text
