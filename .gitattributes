@@ -4,6 +4,8 @@ action/editer_mot.php -text
 action/supprimer_groupe_mots.php -text
 action/supprimer_mot.php -text
 base/mots.php -text
+formulaires/administrer_mot.html -text
+formulaires/administrer_mot.php -text
 formulaires/configurer_mots.html -text
 formulaires/configurer_mots.php -text
 formulaires/editer_groupe_mot.html -text
@@ -13,6 +15,8 @@ formulaires/editer_mot.php -text
 formulaires/inc-choisir-groupemots-tables-liees.html -text
 formulaires/selecteur_groupe_mot.html -text
 inc/mots.php -text
+lang/adminmots_en.php -text
+lang/adminmots_fr.php -text
 lang/mots.xml -text
 lang/mots_ar.php -text
 lang/mots_ast.php -text
@@ -117,6 +121,7 @@ prive/squelettes/hierarchie/groupe_mots.html -text
 prive/squelettes/hierarchie/groupe_mots_edit.html -text
 prive/squelettes/hierarchie/mot.html -text
 prive/squelettes/hierarchie/mot_edit.html -text
+prive/squelettes/inclure/administrer_mot.html -text
 prive/squelettes/navigation/groupe_mots.html -text
 prive/squelettes/navigation/groupe_mots_edit.html -text
 prive/squelettes/navigation/mot.html -text
