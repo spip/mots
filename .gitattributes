@@ -18,6 +18,7 @@ inc/mots.php -text
 lang/adminmots.xml -text
 lang/adminmots_en.php -text
 lang/adminmots_fr.php -text
+lang/adminmots_nl.php -text
 lang/mots.xml -text
 lang/mots_ar.php -text
 lang/mots_ast.php -text
