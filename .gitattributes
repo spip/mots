@@ -16,6 +16,7 @@ formulaires/inc-choisir-groupemots-tables-liees.html -text
 formulaires/selecteur_groupe_mot.html -text
 inc/mots.php -text
 lang/adminmots.xml -text
+lang/adminmots_ar.php -text
 lang/adminmots_de.php -text
 lang/adminmots_en.php -text
 lang/adminmots_fr.php -text
