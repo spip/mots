@@ -112,6 +112,8 @@ prive/objets/contenu/mot.html -text
 prive/objets/infos/groupe_mots.html -text
 prive/objets/infos/mot.html -text
 prive/objets/infos/mot_fonctions.php -text
+prive/objets/liste/articles-mot.html -text
+prive/objets/liste/articles-mot_fonctions.php -text
 prive/objets/liste/mots-admin.html -text
 prive/objets/liste/mots-admin_fonctions.php -text
 prive/objets/liste/mots.html -text
@@ -121,6 +123,7 @@ prive/objets/liste/mots_associer-select.html -text
 prive/objets/liste/mots_associer.html -text
 prive/objets/liste/mots_lies.html -text
 prive/objets/liste/objets_lies_mot.html -text
+prive/objets/liste/rubriques-mot.html -text
 prive/squelettes/contenu/groupe_mots.html -text
 prive/squelettes/contenu/groupe_mots_edit.html -text
 prive/squelettes/contenu/mot.html -text
