@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// E
 	'erreur_admin_mot_action_inconnue' => 'What do you want to do?',
 	'erreur_mot_cle_deja' => 'Impossible: this is the same keyword.',
-	'erreur_selection_id' => 'Select a keyword or enter it’s ID in input field',
+	'erreur_selection_id' => 'Select a keyword or enter it’s ID in input field', # MODIF
 
 	// I
 	'icone_administrer_mot' => 'Advanced operations',
@@ -35,10 +35,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// P
 	'placeholder_id_mot' => 'or #ID_MOT',
-	'placeholder_select' => 'Select…',
+	'placeholder_select' => 'Select…', # MODIF
 
 	// R
-	'result_associer_nb' => ' have been linked to this keyword',
+	'result_associer_nb' => ' have been linked to this keyword', # MODIF
 	'result_associer_ras' => 'Nothing to do: all objects are already linked to this keyword',
 	'result_cancel_ok' => 'Last operation has been canceled.',
 	'result_dissocier_nb' => ' have been unlinked from this keyword',

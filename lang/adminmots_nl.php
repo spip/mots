@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// E
 	'erreur_admin_mot_action_inconnue' => 'Wat wil je doen?',
 	'erreur_mot_cle_deja' => 'Onmogelijk: dit is hetzelfde trefwoord.',
-	'erreur_selection_id' => 'Kies een trefwoord of geef zijn ID in het invoerveld aan',
+	'erreur_selection_id' => 'Kies een trefwoord of geef zijn ID in het invoerveld aan', # MODIF
 
 	// I
 	'icone_administrer_mot' => 'Geavanceerde handelingen',
@@ -35,10 +35,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// P
 	'placeholder_id_mot' => 'of #ID_MOT',
-	'placeholder_select' => 'Kies…',
+	'placeholder_select' => 'Kies…', # MODIF
 
 	// R
-	'result_associer_nb' => ' zijn aan dit trefwoord gekoppeld',
+	'result_associer_nb' => ' zijn aan dit trefwoord gekoppeld', # MODIF
 	'result_associer_ras' => 'Geen actie: alle objecten waren al aan dit trefwoord gekoppeld',
 	'result_cancel_ok' => 'Laatste handeling werd geannuleerd.',
 	'result_dissocier_nb' => ' werden van dit trefwoord ontkoppeld',

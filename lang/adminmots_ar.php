@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// E
 	'erreur_admin_mot_action_inconnue' => 'ماذا تريد القيام به؟',
 	'erreur_mot_cle_deja' => 'غير ممكن: هو المفتاح نفسه قيد التحرير حالياً.',
-	'erreur_selection_id' => 'اختيار مفتاح او تحديد رقمه التسلسلي في حقل الإدخال',
+	'erreur_selection_id' => 'اختيار مفتاح او تحديد رقمه التسلسلي في حقل الإدخال', # MODIF
 
 	// I
 	'icone_administrer_mot' => 'إدارة متطورة',
@@ -35,10 +35,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// P
 	'placeholder_id_mot' => 'أو #ID_MOT',
-	'placeholder_select' => 'اختيار…',
+	'placeholder_select' => 'اختيار…', # MODIF
 
 	// R
-	'result_associer_nb' => ' تم ربطها بهذا المفتاح',
+	'result_associer_nb' => ' تم ربطها بهذا المفتاح', # MODIF
 	'result_associer_ras' => 'لم يتم تنفيذ اي شيء: كل العناصر مرتبطة حالياً بهذا المفتاح',
 	'result_cancel_ok' => 'تم إلغاء العملية الأخيرة.',
 	'result_dissocier_nb' => ' تم فك ربطها بهذا المفتاح',
