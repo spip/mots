@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// E
 	'erreur_admin_mot_action_inconnue' => 'Kion vi volas fari ?',
 	'erreur_mot_cle_deja' => 'Ne eblas : estas la vorto, sur kiu vi jam estas.',
-	'erreur_selection_id' => 'Elektu ŝlosilvorton aŭ indiki ĝian identigilon en la tekstokampo', # MODIF
+	'erreur_selection_id' => 'Elektu ŝlosilvorton aŭ indiki ĝian identigilon en la tekstokampo',
 
 	// I
 	'icone_administrer_mot' => 'Detala admin.',
@@ -35,10 +35,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// P
 	'placeholder_id_mot' => 'aŭ #ID_MOT',
-	'placeholder_select' => 'Elekti...', # MODIF
+	'placeholder_select' => 'Elekti...',
 
 	// R
-	'result_associer_nb' => 'estis asociitaj al tiu ŝlosilvorto', # MODIF
+	'result_associer_nb' => 'estis asociitaj al tiu ŝlosilvorto',
 	'result_associer_ras' => 'Nenio farenda : ĉiuj objektoj jam havas tiun ŝlosilvorton',
 	'result_cancel_ok' => 'La lasta operacio estis nuligita.',
 	'result_dissocier_nb' => 'estis malasociitaj el tiu ŝlosilvorto',
