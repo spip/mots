@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// E
 	'erreur_admin_mot_action_inconnue' => 'Que veux-tu faire ?',
 	'erreur_mot_cle_deja' => 'Impossible : c’est déjà le mot-clé sur lequel tu es.',
-	'erreur_selection_id' => 'Sélectionnes un mot-clé ou indiques son ID dans le champ de saisie', # MODIF
+	'erreur_selection_id' => 'Sélectionnes un mot-clé ou indiques son ID dans le champ de saisie',
 
 	// I
 	'icone_administrer_mot' => 'Admin. avancée',
@@ -35,10 +35,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// P
 	'placeholder_id_mot' => 'ou #ID_MOT',
-	'placeholder_select' => 'Sélectionner…', # MODIF
+	'placeholder_select' => 'Sélectionner…',
 
 	// R
-	'result_associer_nb' => ' ont été associés à ce mot-clé', # MODIF
+	'result_associer_nb' => ' ont été associés à ce mot-clé',
 	'result_associer_ras' => 'Rien à faire : tous les objets ont déjà ce mot-clé',
 	'result_cancel_ok' => 'La dernière opération a été annulée.',
 	'result_dissocier_nb' => ' ont été dissociés de ce mot-clé',
