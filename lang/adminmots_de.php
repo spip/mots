@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// E
 	'erreur_admin_mot_action_inconnue' => 'Was möchsten Sie tun?',
 	'erreur_mot_cle_deja' => 'Nicht möglich: Sie befinden sich bei diesem Schlagwort.',
-	'erreur_selection_id' => 'Wählen Sie ein Schlagwort oder geben Sie seine ID im Eingabefeld an.', # MODIF
+	'erreur_selection_id' => 'Wählen Sie ein Schlagwort oder geben Sie seine ID im Eingabefeld an.',
 
 	// I
 	'icone_administrer_mot' => 'Erweitert',
@@ -35,10 +35,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// P
 	'placeholder_id_mot' => 'oder #ID_MOT',
-	'placeholder_select' => 'Auswählen…', # MODIF
+	'placeholder_select' => 'Auswählen…',
 
 	// R
-	'result_associer_nb' => 'wurden diesem Schlagwort zugeordnet', # MODIF
+	'result_associer_nb' => 'wurden diesem Schlagwort zugeordnet',
 	'result_associer_ras' => 'Nicht erforderlich: Schlagwort bereits allen diesen Objekten zugeordnet',
 	'result_cancel_ok' => 'Der letzte Vorgang wurde widerrufen.',
 	'result_dissocier_nb' => 'wurden von diesem Schlagwort gelöst',
