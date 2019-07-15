@@ -17,7 +17,7 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 	// E
 	'erreur_admin_mot_action_inconnue' => 'O que você quer fazer?',
 	'erreur_mot_cle_deja' => 'Impossível: já é a palavra-chave em que você se encontra.',
-	'erreur_selection_id' => 'Escolha uma palavra-chave ou indique a sua ID no campo de entrada', # MODIF
+	'erreur_selection_id' => 'Escolha uma palavra-chave ou indique a sua ID no campo de entrada',
 
 	// I
 	'icone_administrer_mot' => 'Admin. avançada',
@@ -35,10 +35,10 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
 
 	// P
 	'placeholder_id_mot' => 'ou #ID_MOT',
-	'placeholder_select' => 'Selecionar…', # MODIF
+	'placeholder_select' => 'Selecionar…',
 
 	// R
-	'result_associer_nb' => ' foi associado a esta palavra-chave', # MODIF
+	'result_associer_nb' => ' foi associado a esta palavra-chave',
 	'result_associer_ras' => 'Nada a fazer: todos os objetos já possiem esta palavra-chave',
 	'result_cancel_ok' => 'A última operação foi cancelada.',
 	'result_dissocier_nb' => ' foram dissociadas desta palavra-chave',
