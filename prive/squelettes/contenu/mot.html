@@ -20,8 +20,9 @@
 <BOUCLE_autresobjets(spip_mots_liens){id_mot}{objet !IN article,rubrique}{fusion objet}{par objet}>
 	#SET{table,#OBJET|table_objet}
 	[(#SET{titre,[#OBJET:info_(#GET{table})_liees_mot]})]
-	[(#SET{liste,#VAL{prive/objets/liste/#GET{table}}|trouver_fond|?{#GET{table},objets_lies_mot}})]
-	<INCLURE{fond=prive/objets/liste/#GET{liste},objet,id_mot,ajax,env} />
+	[(#SET{exists,#VAL{prive/objets/liste/#GET{table}}|trouver_fond})]
+	[(#GET{exists}|oui)<INCLURE{fond=prive/objets/liste/#GET{table},id_mot,ajax,env} />]
+	[(#GET{exists}|non)<INCLURE{fond=prive/objets/liste/objets_lies_mot,objet,id_mot,ajax,env} />]
 </BOUCLE_autresobjets>
 </div>
 
