@@ -1,4 +1,10 @@
-<traduction module="adminmots" gestionnaire="salvatore" url="https://trad.spip.net" source="svn://zone.spip.org/spip-zone/_core_/plugins/mots/lang/" reference="fr">
+<traduction
+	module="adminmots"
+	id="adminmots--mots-87b7e"
+	gestionnaire="salvatore"
+	url="https://trad.spip.net"
+	source="svn://zone.spip.org/spip-zone/_core_/plugins/mots/lang"
+	reference="fr">
 	<langue code="ar" url="https://trad.spip.net/tradlang_module/adminmots?lang_cible=ar" total="24" traduits="24" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="RealET" lien="https://trad.spip.net/auteur/realet" />
 	</langue>
@@ -13,8 +19,7 @@
 		<traducteur nom="gpl" lien="https://trad.spip.net/auteur/gpl" />
 		<traducteur nom="RealET" lien="https://trad.spip.net/auteur/realet" />
 	</langue>
-	<langue code="fr" url="https://trad.spip.net/tradlang_module/adminmots?lang_cible=fr" total="24" traduits="24" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
-	</langue>
+	<langue code="fr" url="https://trad.spip.net/tradlang_module/adminmots?lang_cible=fr" total="24" traduits="24" relire="0" modifs="0" nouveaux="0" pourcent="100.00" />
 	<langue code="fr_tu" url="https://trad.spip.net/tradlang_module/adminmots?lang_cible=fr_tu" total="24" traduits="24" relire="0" modifs="0" nouveaux="0" pourcent="100.00">
 		<traducteur nom="RealET" lien="https://trad.spip.net/auteur/realet" />
 	</langue>
