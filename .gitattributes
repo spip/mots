@@ -113,6 +113,7 @@ prive/objets/contenu/mot.html -text
 prive/objets/infos/groupe_mots.html -text
 prive/objets/infos/mot.html -text
 prive/objets/infos/mot_fonctions.php -text
+prive/objets/liste/groupes_mots.html -text
 prive/objets/liste/mots-admin.html -text
 prive/objets/liste/mots-admin_fonctions.php -text
 prive/objets/liste/mots.html -text
