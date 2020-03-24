@@ -253,8 +253,11 @@ function autoriser_mot_creer_dist($faire, $type, $id, $qui, $opt) {
  **/
 function autoriser_mot_supprimer_dist($faire, $type, $id, $qui, $opt) {
 	// On cherche le groupe du mot
-	$id_groupe = $opt['id_groupe'] ?
-		$opt['id_groupe'] : sql_getfetsel('id_groupe', 'spip_mots', 'id_mot = ' . intval($id));
+	if (!empty($opt['id_groupe'])) {
+		$id_groupe = $opt['id_groupe'];
+	} else {
+		$id_groupe = sql_getfetsel('id_groupe', 'spip_mots', 'id_mot = ' . intval($id));
+	}
 
 	return autoriser('creer', 'mot', $id, $qui, array('id_groupe' => $id_groupe));
 }
