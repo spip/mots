@@ -96,7 +96,10 @@ function calculer_utilisations_mots($id_groupe) {
 				$c_statut = isset($infos['statut'][0]['champ']) ? $infos['statut'][0]['champ'] : 'statut';
 
 				// bricoler les statuts d'apres la declaration de l'objet (champ previsu a defaut de mieux)
-				if (array_key_exists('previsu', $infos['statut'][0]) and strlen($infos['statut'][0]['previsu']) > 1) {
+				if (
+					!empty($infos['statut'][0]['previsu'])
+					and strlen($infos['statut'][0]['previsu']) > 1
+				) {
 					$str_statuts = $infos['statut'][0]['previsu'];
 					if ($GLOBALS['connect_statut'] != '0minirezo') {
 						$str_statuts = str_replace('prepa', '', $str_statuts);
