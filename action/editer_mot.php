@@ -126,12 +126,7 @@ function mot_modifier($id_mot, $set = null) {
 	include_spip('inc/modifier');
 	$c = collecter_requests(
 		// white list
-		array(
-			'titre',
-			'descriptif',
-			'texte',
-			'id_groupe'
-		),
+		objet_info('mot', 'champs_editables'),
 		// black list
 		array('id_groupe'),
 		// donnees eventuellement fournies

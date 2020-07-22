@@ -139,17 +139,7 @@ function groupe_mots_modifier($id_groupe, $set = null) {
 	include_spip('inc/modifier');
 	$c = collecter_requests(
 		// white list
-		array(
-			'titre',
-			'descriptif',
-			'texte',
-			'tables_liees',
-			'obligatoire',
-			'unseul',
-			'comite',
-			'forum',
-			'minirezo',
-		),
+		objet_info('groupe_mots', 'champs_editables'),
 		// black list
 		array(),
 		// donnees eventuellement fournies

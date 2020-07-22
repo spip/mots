@@ -128,7 +128,18 @@ function mots_declarer_tables_objets_sql($tables) {
 		),
 		'tables_jointures' => array(#'mots_liens' // declare generiquement ci dessous
 		),
-		'champs_versionnes' => array('titre', 'descriptif', 'texte', 'id_groupe'),
+		'champs_editables' => array(
+			'titre',
+			'descriptif',
+			'texte',
+			'id_groupe',
+		),
+		'champs_versionnes' => array(
+			'titre',
+			'descriptif',
+			'texte',
+			'id_groupe'
+		),
 	);
 
 	$tables['spip_groupes_mots'] = array(
@@ -180,16 +191,27 @@ function mots_declarer_tables_objets_sql($tables) {
 		'tables_jointures' => array(
 			'mots'
 		),
+		'champs_editables' => array(
+			'titre',
+			'descriptif',
+			'texte',
+			'tables_liees',
+			'obligatoire',
+			'unseul',
+			'comite',
+			'forum',
+			'minirezo',
+		),
 		'champs_versionnes' => array(
 			'titre',
 			'descriptif',
 			'texte',
-			'un_seul',
+			'unseul',
 			'obligatoire',
 			'tables_liees',
 			'minirezo',
 			'forum',
-			'comite'
+			'comite',
 		),
 	);
 
