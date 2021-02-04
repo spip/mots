@@ -63,6 +63,13 @@ function formulaires_editer_mot_charger_dist(
 		$valeurs['id_groupe'] = $valeurs['id_parent'];
 	}
 
+	if (test_formulaire_inclus_par_modele()) {
+		if (intval($id_mot) and !autoriser('modifier', 'mot', intval($id_mot))) {
+			$valeurs['editable'] = '';
+		}
+	}
+
+
 	if ($associer_objet) {
 		if (intval($associer_objet)) {
 			// compat avec l'appel de la forme ajouter_id_article
