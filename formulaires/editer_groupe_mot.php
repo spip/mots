@@ -47,6 +47,11 @@ function formulaires_editer_groupe_mot_charger_dist(
 ) {
 	$valeurs = formulaires_editer_objet_charger('groupe_mots', $id_groupe, 0, '', $retour, $config_fonc, $row, $hidden);
 
+	if (intval($id_groupe) and !autoriser('modifier', 'groupemots', intval($id_groupe))) {
+		$valeurs['editable'] = '';
+	}
+
+
 	$valeurs['tables_liees'] = explode(',', $valeurs['tables_liees']);
 
 	// par defaut a la creation de groupe
