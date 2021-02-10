@@ -164,7 +164,6 @@ function mots_declarer_tables_objets_sql($tables) {
 		'info_1_objet' => 'mots:info_1_groupemots',
 		'info_nb_objets' => 'mots:info_nb_groupemots',
 		'titre' => "titre, '' AS lang",
-		'date' => 'date',
 		'principale' => 'oui',
 		'page' => '', // pas de page publique pour les groupes
 		'field' => array(
