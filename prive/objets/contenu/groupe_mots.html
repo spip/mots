@@ -1,32 +1,32 @@
 <BOUCLE_afficher_contenu(GROUPES_MOTS){id_groupe=#ENV{id}}{tout}>
 
-<div class="groupe_mots-quoi">
+<div class="champ groupe_mots-quoi">
 <BOUCLE_tables(POUR){tableau #TABLES_LIEES|explode{','}}{', '}>[
 <span class="table">(#VALEUR|objet_info{texte_objets}|_T)</span>]</BOUCLE_tables>
 </div>
 
 <div class="groupe_mots-comment">
 <div class="champ contenu_unseul[ (#UNSEUL|=={oui}|non|?{vide})]">
-<div class='label'><:mots:info_un_mot:></div>
+<div class='label offscreen'><:mots:info_un_mot:></div>
 <div dir='#LANG_DIR' class='unseul'>[(#UNSEUL|=={oui}|oui)<:mots:info_un_mot:>]</div>
 </div>
 <div class="champ contenu_obligatoire[ (#OBLIGATOIRE|=={oui}|non|?{vide})]">
-<div class='label'><:mots:info_groupe_important:></div>
+<div class='label offscreen'><:mots:info_groupe_important:></div>
 <div dir='#LANG_DIR' class='obligatoire'>[(#OBLIGATOIRE|=={oui}|oui)<:mots:info_groupe_important:>]</div>
 </div>
 </div>
 
 <div class="groupe_mots-qui">
 <div class="champ contenu_minirezo[ (#MINIREZO|=={oui}|non|?{vide})]">
-<div class='label'><:info_administrateurs:></div>
+<div class='label offscreen'><:info_administrateurs:></div>
 <div dir='#LANG_DIR' class='minirezo'>[(#MINIREZO|=={oui}|oui)<:info_administrateurs:>]</div>
 </div>
 <div class="champ contenu_comite[ (#COMITE|=={oui}|non|?{vide})]">
-<div class='label'><:info_redacteurs:></div>
+<div class='label offscreen'><:info_redacteurs:></div>
 <div dir='#LANG_DIR' class='comite'>[(#COMITE|=={oui}|oui)<:info_redacteurs:>]</div>
 </div>
 <div class="champ contenu_visiteur[ (#VISITEUR|=={oui}|non|?{vide})]">
-<div class='label'><:info_visiteurs_02:></div>
+<div class='label offscreen'><:info_visiteurs_02:></div>
 <div dir='#LANG_DIR' class='visiteur'>[(#VISITEUR|=={oui}|oui)<:info_visiteurs_02:>]</div>
 </div>
 </div>
