@@ -5,7 +5,7 @@
 		<ul class='liste-items'>
 		<BOUCLE_nav(GROUPES_MOTS){par num titre}{par multi titre}>[(#AUTORISER{voir,groupemots,#ID_GROUPE}|oui)
 		<li class="item"><a href='#groupe_mots-#ID_GROUPE'
-					 onclick='$(".groupe_mots").hide().filter("#groupe_mots-#ID_GROUPE").show();$(this).parent().addClass("on").siblings().removeClass("on").parent().siblings("a.tous").show();return false;'
+					 onclick='$(".groupe_mots").hide().filter("#groupe_mots-#ID_GROUPE").show();$(this).parent().addClass("on").siblings().removeClass("on").parent().siblings("a.tous").show();'
 				>[(#RANG). ]#TITRE</a></li>
 		]</BOUCLE_nav>
 		</ul>
