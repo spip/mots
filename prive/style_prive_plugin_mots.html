@@ -18,9 +18,19 @@
 .formulaire_editer_liens .associer_mot.obligatoire.nonvu {
 	background-color:#FFCDAF;
 }
-.formulaire_editer_liens .associer_mot select,
-.formulaire_editer_liens .associer_mot input.text {
-	width: 75%;
+.formulaire_editer_liens .associer_mot .bouton-inline {
+	display: flex;
+}
+.formulaire_editer_liens .associer_mot .bouton-inline select.avec-bouton,
+.formulaire_editer_liens .associer_mot .bouton-inline input.text {
+	border-bottom-#RIGHT-radius: 0;
+	border-top-#RIGHT-radius: 0;
+	border-#RIGHT: 0;
+}
+.formulaire_editer_liens .associer_mot .bouton-inline .btn {
+	border-bottom-#LEFT-radius: 0;
+	border-top-#LEFT-radius: 0;
+	flex: 0 0 auto;
 }
 .formulaire_editer_liens .associer_mot .submit {
 	float: var(--spip-right);

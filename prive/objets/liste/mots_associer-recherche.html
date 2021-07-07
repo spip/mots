@@ -5,8 +5,10 @@
 	[(#SET{action,[(#VAL{remplacer_lien}|concat{[(#VAL{91}|chr)],'mot-',#ID_MOT,'-',#OBJET,'-',#ID_OBJET,[(#VAL{93}|chr)]})]})]
 ]</BOUCLE_remplacer>
 
-<input type="text" class="text" name="recherche[#ID_GROUPE]" value="[(#ENV*{recherche}|table_valeur{#ID_GROUPE})]" />
-<input type="submit" class="btn submit" name="recherche[b#ID_GROUPE]" value="<:info_rechercher:>" />
+<div class="bouton-inline">
+	<input type="text" class="text" name="recherche[#ID_GROUPE]" value="[(#ENV*{recherche}|table_valeur{#ID_GROUPE})]" />
+	<input type="submit" class="btn submit btn_secondaire" name="recherche[b#ID_GROUPE]" value="<:info_rechercher:>" />
+</div>
 <input type="hidden" name="debutmota#ID_GROUPE" value='#ENV{debutmota#ID_GROUPE,#VAL{debutmotamota#ID_GROUPE}|_request}' />
 #SET{recherche,#ENV*{recherche}|table_valeur{#ID_GROUPE}|replace{","," "}}
 [(#GET{recherche}|non|et{#ENV*{recherche}|table_valeur{b#ID_GROUPE}})
