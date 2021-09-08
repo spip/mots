@@ -219,7 +219,8 @@ function autoriser_mot_creer_dist($faire, $type, $id, $qui, $opt) {
 	$where = '';
 	// si objet associe, verifier qu'un groupe peut etre associe
 	// a la table correspondante
-	if (isset($opt['associer_objet'])
+	if (
+		isset($opt['associer_objet'])
 		and $associer_objet = $opt['associer_objet']
 	) {
 		if (!preg_match(',^(\w+)\|[0-9]+$,', $associer_objet, $match)) {
@@ -259,7 +260,7 @@ function autoriser_mot_supprimer_dist($faire, $type, $id, $qui, $opt) {
 		$id_groupe = sql_getfetsel('id_groupe', 'spip_mots', 'id_mot = ' . intval($id));
 	}
 
-	return autoriser('creer', 'mot', $id, $qui, array('id_groupe' => $id_groupe));
+	return autoriser('creer', 'mot', $id, $qui, ['id_groupe' => $id_groupe]);
 }
 
 
@@ -339,7 +340,7 @@ function autoriser_associermots_dist($faire, $type, $id, $qui, $opt) {
 function autoriser_groupemots_afficherselecteurmots_dist($faire, $type, $id, $qui, $opt) {
 	if (!isset($opt['minirezo']) || !isset($opt['comite'])) {
 		$i = sql_fetsel(
-			array('minirezo', 'comite'),
+			['minirezo', 'comite'],
 			'spip_groupes_mots',
 			'id_groupe=' . intval($id)
 		);
@@ -352,7 +353,7 @@ function autoriser_groupemots_afficherselecteurmots_dist($faire, $type, $id, $qu
 		$admin = $opt['minirezo'];
 		$redac = $opt['comite'];
 	}
-	$statuts = array();
+	$statuts = [];
 	if ($admin == 'oui') {
 		$statuts[] = '0minirezo';
 	}

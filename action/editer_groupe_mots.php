@@ -49,7 +49,7 @@ function action_editer_groupe_mots_dist($id_groupe = null) {
 		$err = groupe_mots_modifier($id_groupe);
 	}
 
-	return array($id_groupe, $err);
+	return [$id_groupe, $err];
 }
 
 
@@ -71,13 +71,13 @@ function groupe_mots_inserer($id_parent = null, $set = null) {
 	// groupe_mots_inserer($table='')
 	if (is_string($id_parent) and strlen($id_parent)) {
 		if (is_null($set)) {
-			$set = array();
+			$set = [];
 		}
 		$set['tables_liees'] = $id_parent;
 	}
 
 
-	$champs = array(
+	$champs = [
 		'titre' => '',
 		'unseul' => 'non',
 		'obligatoire' => 'non',
@@ -85,7 +85,7 @@ function groupe_mots_inserer($id_parent = null, $set = null) {
 		'minirezo' => 'oui',
 		'comite' => 'non',
 		'forum' => 'non'
-	);
+	];
 
 	if ($set) {
 		$champs = array_merge($champs, $set);
@@ -94,25 +94,25 @@ function groupe_mots_inserer($id_parent = null, $set = null) {
 	// Envoyer aux plugins
 	$champs = pipeline(
 		'pre_insertion',
-		array(
-			'args' => array(
+		[
+			'args' => [
 				'table' => 'spip_groupes_mots',
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 	$id_groupe = sql_insertq('spip_groupes_mots', $champs);
 
 	pipeline(
 		'post_insertion',
-		array(
-			'args' => array(
+		[
+			'args' => [
 				'table' => 'spip_groupes_mots',
 				'id_objet' => $id_groupe
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 	return $id_groupe;
@@ -141,34 +141,36 @@ function groupe_mots_modifier($id_groupe, $set = null) {
 		// white list
 		objet_info('groupe_mots', 'champs_editables'),
 		// black list
-		array(),
+		[],
 		// donnees eventuellement fournies
 		$set
 	);
 	// normaliser les champ oui/non
-	foreach (array(
+	foreach (
+		[
 				'obligatoire',
 				'unseul',
 				'comite',
 				'forum',
 				'minirezo'
-			) as $champ) {
+			] as $champ
+	) {
 		if (isset($c[$champ])) {
 			$c[$champ] = ($c[$champ] == 'oui' ? 'oui' : 'non');
 		}
 	}
 
 	if (isset($c['tables_liees']) and is_array($c['tables_liees'])) {
-		$c['tables_liees'] = implode(',', array_diff($c['tables_liees'], array('')));
+		$c['tables_liees'] = implode(',', array_diff($c['tables_liees'], ['']));
 	}
 
 	$err = objet_modifier_champs(
 		'groupe_mot',
 		$id_groupe,
-		array(
+		[
 			'data' => $set,
-			'nonvide' => array('titre' => _T('info_sans_titre'))
-		),
+			'nonvide' => ['titre' => _T('info_sans_titre')]
+		],
 		$c
 	);
 

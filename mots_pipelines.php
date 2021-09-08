@@ -51,11 +51,12 @@ function mots_configurer_liste_metas($metas) {
  */
 function mots_affiche_milieu($flux) {
 	if ($flux['args']['exec'] == 'configurer_contenu') {
-		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/configurer', array('configurer' => 'configurer_mots'));
+		$flux['data'] .= recuperer_fond('prive/squelettes/inclure/configurer', ['configurer' => 'configurer_mots']);
 	}
 
 	// si on est sur une page ou il faut inserer les mots cles...
-	if ($en_cours = trouver_objet_exec($flux['args']['exec'])
+	if (
+		$en_cours = trouver_objet_exec($flux['args']['exec'])
 		and $en_cours['edition'] !== true // page visu
 		and $type = $en_cours['type']
 		and $id_table_objet = $en_cours['id_table_objet']
@@ -64,11 +65,11 @@ function mots_affiche_milieu($flux) {
 	) {
 		$texte = recuperer_fond(
 			'prive/objets/editer/liens',
-			array(
+			[
 				'table_source' => 'mots',
 				'objet' => $type,
 				'id_objet' => $id,
-			)
+			]
 		);
 		if ($p = strpos($flux['data'], '<!--affiche_milieu-->')) {
 			$flux['data'] = substr_replace($flux['data'], $texte, $p, 0);
@@ -100,10 +101,9 @@ function mots_optimiser_base_disparus($flux) {
 	// optimiser les liens morts :
 	// entre mots vers des objets effaces
 	// depuis des mots effaces
-	$n += objet_optimiser_liens(array('mot' => '*'), '*');
+	$n += objet_optimiser_liens(['mot' => '*'], '*');
 
 	return $flux;
-
 }
 
 
@@ -119,11 +119,12 @@ function mots_optimiser_base_disparus($flux) {
  *     Données du pipeline
  */
 function mots_post_edition($flux) {
-	if (isset($flux['args']['table'])
+	if (
+		isset($flux['args']['table'])
 		and ($flux['args']['table'] == 'spip_groupes_mots')
 		and isset($flux['data']['titre'])
 	) {
-		sql_updateq('spip_mots', array('type' => $flux['data']['titre']), 'id_groupe=' . $flux['args']['id_objet']);
+		sql_updateq('spip_mots', ['type' => $flux['data']['titre']], 'id_groupe=' . $flux['args']['id_objet']);
 	}
 
 	return $flux;

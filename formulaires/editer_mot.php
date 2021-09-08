@@ -55,7 +55,7 @@ function formulaires_editer_mot_charger_dist(
 	$dummy1 = '',
 	$dummy2 = '',
 	$config_fonc = 'mots_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
 	$valeurs = formulaires_editer_objet_charger('mot', $id_mot, $id_groupe, '', $retour, $config_fonc, $row, $hidden);
@@ -80,7 +80,8 @@ function formulaires_editer_mot_charger_dist(
 	$valeurs['table'] = ($associer_objet ? table_objet($objet) : '');
 
 	// Si nouveau et titre dans l'url : fixer le titre
-	if ($id_mot == 'oui'
+	if (
+		$id_mot == 'oui'
 		and strlen($titre = _request('titre'))
 	) {
 		$valeurs['titre'] = $titre;
@@ -122,10 +123,10 @@ function formulaires_editer_mot_identifier_dist(
 	$dummy1 = '',
 	$dummy2 = '',
 	$config_fonc = 'mots_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
-	return serialize(array(intval($id_mot), $associer_objet));
+	return serialize([intval($id_mot), $associer_objet]);
 }
 
 /**
@@ -180,25 +181,28 @@ function formulaires_editer_mot_verifier_dist(
 	$dummy1 = '',
 	$dummy2 = '',
 	$config_fonc = 'mots_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
 
-	$erreurs = formulaires_editer_objet_verifier('mot', $id_mot, array('titre'));
+	$erreurs = formulaires_editer_objet_verifier('mot', $id_mot, ['titre']);
 	// verifier qu'un mot du meme groupe n'existe pas avec le meme titre
 	// la comparaison accepte un numero absent ou different
 	// sinon avertir
 	// on ne fait la verification que si c'est une creation de mot ou un retitrage
-	if (!intval($id_mot)
+	if (
+		!intval($id_mot)
 		or supprimer_numero(_request('titre'))
 			!== supprimer_numero(sql_getfetsel('titre', 'spip_mots', 'id_mot=' . intval($id_mot)))
 	) {
 		if (!count($erreurs) and !_request('confirm_titre_mot')) {
-			if (sql_countsel(
-				'spip_mots',
-				'titre REGEXP ' . sql_quote('^([0-9]+[.] )?' . preg_quote(supprimer_numero(_request('titre'))) . '$')
-				. ' AND id_mot<>' . intval($id_mot)
-			)) {
+			if (
+				sql_countsel(
+					'spip_mots',
+					'titre REGEXP ' . sql_quote('^([0-9]+[.] )?' . preg_quote(supprimer_numero(_request('titre'))) . '$')
+					. ' AND id_mot<>' . intval($id_mot)
+				)
+			) {
 				$erreurs['titre'] =
 					_T('mots:avis_doublon_mot_cle')
 					. " <input type='hidden' name='confirm_titre_mot' value='1' />";
@@ -240,7 +244,7 @@ function formulaires_editer_mot_traiter_dist(
 	$dummy1 = '',
 	$dummy2 = '',
 	$config_fonc = 'mots_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
 	set_request('redirect', '');
@@ -265,7 +269,7 @@ function formulaires_editer_mot_traiter_dist(
 			}
 			if ($objet and $id_objet and autoriser('modifier', $objet, $id_objet)) {
 				include_spip('action/editer_mot');
-				mot_associer($id_mot, array($objet => $id_objet));
+				mot_associer($id_mot, [$objet => $id_objet]);
 				if (isset($res['redirect'])) {
 					$res['redirect'] = parametre_url($res['redirect'], 'id_lien_ajoute', $id_mot, '&');
 				}

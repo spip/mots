@@ -1,0 +1,567 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Function _T not found\\.$#"
+			count: 1
+			path: action/editer_groupe_mots.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 1
+			path: action/editer_groupe_mots.php
+
+		-
+			message: "#^Function collecter_requests not found\\.$#"
+			count: 1
+			path: action/editer_groupe_mots.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 2
+			path: action/editer_groupe_mots.php
+
+		-
+			message: "#^Function objet_info not found\\.$#"
+			count: 1
+			path: action/editer_groupe_mots.php
+
+		-
+			message: "#^Function objet_modifier_champs not found\\.$#"
+			count: 1
+			path: action/editer_groupe_mots.php
+
+		-
+			message: "#^Function pipeline not found\\.$#"
+			count: 2
+			path: action/editer_groupe_mots.php
+
+		-
+			message: "#^Function sql_insertq not found\\.$#"
+			count: 1
+			path: action/editer_groupe_mots.php
+
+		-
+			message: "#^Function _T not found\\.$#"
+			count: 1
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function _request not found\\.$#"
+			count: 1
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 2
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function collecter_requests not found\\.$#"
+			count: 2
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 6
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function objet_associer not found\\.$#"
+			count: 1
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function objet_dissocier not found\\.$#"
+			count: 2
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function objet_info not found\\.$#"
+			count: 1
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function objet_modifier_champs not found\\.$#"
+			count: 1
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function objet_qualifier not found\\.$#"
+			count: 1
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function pipeline not found\\.$#"
+			count: 5
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function sql_allfetsel not found\\.$#"
+			count: 1
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function sql_countsel not found\\.$#"
+			count: 1
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function sql_delete not found\\.$#"
+			count: 1
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function sql_fetsel not found\\.$#"
+			count: 2
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function sql_getfetsel not found\\.$#"
+			count: 1
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function sql_insertq not found\\.$#"
+			count: 1
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function sql_updateq not found\\.$#"
+			count: 1
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function suivre_invalideur not found\\.$#"
+			count: 1
+			path: action/editer_mot.php
+
+		-
+			message: "#^Function autoriser not found\\.$#"
+			count: 1
+			path: action/supprimer_groupe_mots.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 1
+			path: action/supprimer_groupe_mots.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 2
+			path: action/supprimer_groupe_mots.php
+
+		-
+			message: "#^Function spip_log not found\\.$#"
+			count: 1
+			path: action/supprimer_groupe_mots.php
+
+		-
+			message: "#^Function sql_delete not found\\.$#"
+			count: 1
+			path: action/supprimer_groupe_mots.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 1
+			path: action/supprimer_mot.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 1
+			path: action/supprimer_mot.php
+
+		-
+			message: "#^Function _T not found\\.$#"
+			count: 11
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function _request not found\\.$#"
+			count: 13
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function attribut_html not found\\.$#"
+			count: 1
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function ecrire_fichier not found\\.$#"
+			count: 1
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function generer_url_entite not found\\.$#"
+			count: 1
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function inserer_attribut not found\\.$#"
+			count: 1
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function objet_afficher_nb not found\\.$#"
+			count: 3
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function objet_info not found\\.$#"
+			count: 1
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function refuser_traiter_formulaire_ajax not found\\.$#"
+			count: 1
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function set_request not found\\.$#"
+			count: 3
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function sql_allfetsel not found\\.$#"
+			count: 10
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function sql_delete not found\\.$#"
+			count: 2
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function sql_fetch not found\\.$#"
+			count: 1
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function sql_fetsel not found\\.$#"
+			count: 1
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function sql_in not found\\.$#"
+			count: 3
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function sql_insertq not found\\.$#"
+			count: 1
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function sql_insertq_multi not found\\.$#"
+			count: 1
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function sql_quote not found\\.$#"
+			count: 5
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function sql_select not found\\.$#"
+			count: 1
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function supprimer_numero not found\\.$#"
+			count: 2
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function typo not found\\.$#"
+			count: 2
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function vider_attribut not found\\.$#"
+			count: 1
+			path: formulaires/administrer_mot.php
+
+		-
+			message: "#^Function _T not found\\.$#"
+			count: 1
+			path: formulaires/configurer_mots.php
+
+		-
+			message: "#^Function _request not found\\.$#"
+			count: 1
+			path: formulaires/configurer_mots.php
+
+		-
+			message: "#^Function ecrire_meta not found\\.$#"
+			count: 1
+			path: formulaires/configurer_mots.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 1
+			path: formulaires/configurer_mots.php
+
+		-
+			message: "#^Function _request not found\\.$#"
+			count: 1
+			path: formulaires/editer_groupe_mot.php
+
+		-
+			message: "#^Function autoriser not found\\.$#"
+			count: 1
+			path: formulaires/editer_groupe_mot.php
+
+		-
+			message: "#^Function formulaires_editer_objet_charger not found\\.$#"
+			count: 1
+			path: formulaires/editer_groupe_mot.php
+
+		-
+			message: "#^Function formulaires_editer_objet_traiter not found\\.$#"
+			count: 1
+			path: formulaires/editer_groupe_mot.php
+
+		-
+			message: "#^Function formulaires_editer_objet_verifier not found\\.$#"
+			count: 1
+			path: formulaires/editer_groupe_mot.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 2
+			path: formulaires/editer_groupe_mot.php
+
+		-
+			message: "#^Function set_request not found\\.$#"
+			count: 2
+			path: formulaires/editer_groupe_mot.php
+
+		-
+			message: "#^Function _T not found\\.$#"
+			count: 1
+			path: formulaires/editer_mot.php
+
+		-
+			message: "#^Function _request not found\\.$#"
+			count: 4
+			path: formulaires/editer_mot.php
+
+		-
+			message: "#^Function autoriser not found\\.$#"
+			count: 2
+			path: formulaires/editer_mot.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 1
+			path: formulaires/editer_mot.php
+
+		-
+			message: "#^Function formulaires_editer_objet_charger not found\\.$#"
+			count: 1
+			path: formulaires/editer_mot.php
+
+		-
+			message: "#^Function formulaires_editer_objet_verifier not found\\.$#"
+			count: 1
+			path: formulaires/editer_mot.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 3
+			path: formulaires/editer_mot.php
+
+		-
+			message: "#^Function parametre_url not found\\.$#"
+			count: 3
+			path: formulaires/editer_mot.php
+
+		-
+			message: "#^Function set_request not found\\.$#"
+			count: 1
+			path: formulaires/editer_mot.php
+
+		-
+			message: "#^Function sql_countsel not found\\.$#"
+			count: 1
+			path: formulaires/editer_mot.php
+
+		-
+			message: "#^Function sql_getfetsel not found\\.$#"
+			count: 1
+			path: formulaires/editer_mot.php
+
+		-
+			message: "#^Function sql_quote not found\\.$#"
+			count: 1
+			path: formulaires/editer_mot.php
+
+		-
+			message: "#^Function supprimer_numero not found\\.$#"
+			count: 3
+			path: formulaires/editer_mot.php
+
+		-
+			message: "#^Function table_objet not found\\.$#"
+			count: 1
+			path: formulaires/editer_mot.php
+
+		-
+			message: "#^Function id_table_objet not found\\.$#"
+			count: 1
+			path: inc/mots.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 3
+			path: inc/mots.php
+
+		-
+			message: "#^Function lister_tables_objets_sql not found\\.$#"
+			count: 2
+			path: inc/mots.php
+
+		-
+			message: "#^Function objet_afficher_nb not found\\.$#"
+			count: 1
+			path: inc/mots.php
+
+		-
+			message: "#^Function pipeline not found\\.$#"
+			count: 1
+			path: inc/mots.php
+
+		-
+			message: "#^Function sql_allfetsel not found\\.$#"
+			count: 2
+			path: inc/mots.php
+
+		-
+			message: "#^Function sql_in not found\\.$#"
+			count: 2
+			path: inc/mots.php
+
+		-
+			message: "#^Function sql_quote not found\\.$#"
+			count: 1
+			path: inc/mots.php
+
+		-
+			message: "#^Function table_objet_sql not found\\.$#"
+			count: 1
+			path: inc/mots.php
+
+		-
+			message: "#^Function charger_fonction not found\\.$#"
+			count: 1
+			path: mots_administrations.php
+
+		-
+			message: "#^Function ecrire_meta not found\\.$#"
+			count: 1
+			path: mots_administrations.php
+
+		-
+			message: "#^Function effacer_meta not found\\.$#"
+			count: 3
+			path: mots_administrations.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 2
+			path: mots_administrations.php
+
+		-
+			message: "#^Function maj_plugin not found\\.$#"
+			count: 1
+			path: mots_administrations.php
+
+		-
+			message: "#^Function sql_drop_table not found\\.$#"
+			count: 3
+			path: mots_administrations.php
+
+		-
+			message: "#^Function autoriser not found\\.$#"
+			count: 8
+			path: mots_autoriser.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 1
+			path: mots_autoriser.php
+
+		-
+			message: "#^Function sql_countsel not found\\.$#"
+			count: 6
+			path: mots_autoriser.php
+
+		-
+			message: "#^Function sql_fetsel not found\\.$#"
+			count: 3
+			path: mots_autoriser.php
+
+		-
+			message: "#^Function sql_getfetsel not found\\.$#"
+			count: 2
+			path: mots_autoriser.php
+
+		-
+			message: "#^Function table_objet not found\\.$#"
+			count: 3
+			path: mots_autoriser.php
+
+		-
+			message: "#^Function _T not found\\.$#"
+			count: 1
+			path: mots_ieconfig.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 1
+			path: mots_pipelines.php
+
+		-
+			message: "#^Function objet_optimiser_liens not found\\.$#"
+			count: 1
+			path: mots_pipelines.php
+
+		-
+			message: "#^Function recuperer_fond not found\\.$#"
+			count: 2
+			path: mots_pipelines.php
+
+		-
+			message: "#^Function sql_delete not found\\.$#"
+			count: 1
+			path: mots_pipelines.php
+
+		-
+			message: "#^Function sql_quote not found\\.$#"
+			count: 1
+			path: mots_pipelines.php
+
+		-
+			message: "#^Function sql_updateq not found\\.$#"
+			count: 1
+			path: mots_pipelines.php
+
+		-
+			message: "#^Function trouver_objet_exec not found\\.$#"
+			count: 1
+			path: mots_pipelines.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 1
+			path: prive/objets/infos/mot_fonctions.php
+
+		-
+			message: "#^Function include_spip not found\\.$#"
+			count: 1
+			path: prive/objets/liste/mots-admin_fonctions.php
+
+		-
+			message: "#^Function chemin_image not found\\.$#"
+			count: 1
+			path: puce_statut/mot.php
+
