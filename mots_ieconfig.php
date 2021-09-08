@@ -5,6 +5,7 @@
  *
  * @package SPIP\Mots\Pipelines
  **/
+
 if (!defined('_ECRIRE_INC_VERSION')) {
 	return;
 }

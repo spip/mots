@@ -42,7 +42,7 @@ function formulaires_editer_groupe_mot_charger_dist(
 	$id_groupe = 'new',
 	$retour = '',
 	$config_fonc = 'groupes_mots_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
 	$valeurs = formulaires_editer_objet_charger('groupe_mots', $id_groupe, 0, '', $retour, $config_fonc, $row, $hidden);
@@ -56,7 +56,7 @@ function formulaires_editer_groupe_mot_charger_dist(
 
 	// par defaut a la creation de groupe
 	if (!intval($id_groupe)) {
-		$valeurs['tables_liees'] = array('articles');
+		$valeurs['tables_liees'] = ['articles'];
 		$valeurs['minirezo'] = 'oui';
 		$valeurs['comite'] = 'oui';
 	}
@@ -85,10 +85,10 @@ function formulaires_editer_groupe_mot_identifier_dist(
 	$id_groupe = 'new',
 	$retour = '',
 	$config_fonc = 'groupes_mots_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
-	return serialize(array(intval($id_groupe)));
+	return serialize([intval($id_groupe)]);
 }
 
 /**
@@ -129,11 +129,11 @@ function formulaires_editer_groupe_mot_verifier_dist(
 	$id_groupe = 'new',
 	$retour = '',
 	$config_fonc = 'groupes_mots_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
 
-	$erreurs = formulaires_editer_objet_verifier('groupe_mots', 0, array('titre'));
+	$erreurs = formulaires_editer_objet_verifier('groupe_mots', 0, ['titre']);
 
 	return $erreurs;
 }
@@ -158,18 +158,20 @@ function formulaires_editer_groupe_mot_traiter_dist(
 	$id_groupe = 'new',
 	$retour = '',
 	$config_fonc = 'groupes_mots_edit_config',
-	$row = array(),
+	$row = [],
 	$hidden = ''
 ) {
 	set_request('redirect', '');
 	// cas des checkbox : injecter la valeur non si rien de coche
-	foreach (array(
-		         'obligatoire',
-		         'unseul',
-		         'comite',
-		         'forum',
-		         'minirezo'
-	         ) as $champ) {
+	foreach (
+		[
+				 'obligatoire',
+				 'unseul',
+				 'comite',
+				 'forum',
+				 'minirezo'
+			 ] as $champ
+	) {
 		if (!_request($champ)) {
 			set_request($champ, 'non');
 		}

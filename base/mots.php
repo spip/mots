@@ -36,14 +36,14 @@ function mots_declarer_tables_interfaces($interfaces) {
 	$interfaces['exceptions_des_tables']['mots']['titre_mot'] = 'titre';
 	$interfaces['table_des_traitements']['TYPE']['mots'] = _TRAITEMENT_TYPO_SANS_NUMERO;
 
-	$interfaces['exceptions_des_jointures']['titre_mot'] = array('spip_mots', 'titre');
-	$interfaces['exceptions_des_jointures']['type_mot'] = array('spip_mots', 'type');
-	$interfaces['exceptions_des_jointures']['id_mot_syndic'] = array('spip_mots_liens', 'id_mot');
-	$interfaces['exceptions_des_jointures']['titre_mot_syndic'] = array('spip_mots', 'titre');
-	$interfaces['exceptions_des_jointures']['type_mot_syndic'] = array('spip_mots', 'type');
-	$interfaces['exceptions_des_jointures']['spip_articles']['id_groupe'] = array('spip_mots', 'id_groupe');
-	$interfaces['exceptions_des_jointures']['spip_rubriques']['id_groupe'] = array('spip_mots', 'id_groupe');
-	$interfaces['exceptions_des_jointures']['spip_syndic']['id_groupe'] = array('spip_mots', 'id_groupe');
+	$interfaces['exceptions_des_jointures']['titre_mot'] = ['spip_mots', 'titre'];
+	$interfaces['exceptions_des_jointures']['type_mot'] = ['spip_mots', 'type'];
+	$interfaces['exceptions_des_jointures']['id_mot_syndic'] = ['spip_mots_liens', 'id_mot'];
+	$interfaces['exceptions_des_jointures']['titre_mot_syndic'] = ['spip_mots', 'titre'];
+	$interfaces['exceptions_des_jointures']['type_mot_syndic'] = ['spip_mots', 'type'];
+	$interfaces['exceptions_des_jointures']['spip_articles']['id_groupe'] = ['spip_mots', 'id_groupe'];
+	$interfaces['exceptions_des_jointures']['spip_rubriques']['id_groupe'] = ['spip_mots', 'id_groupe'];
+	$interfaces['exceptions_des_jointures']['spip_syndic']['id_groupe'] = ['spip_mots', 'id_groupe'];
 
 	return $interfaces;
 }
@@ -60,21 +60,21 @@ function mots_declarer_tables_interfaces($interfaces) {
  */
 function mots_declarer_tables_auxiliaires($tables_auxiliaires) {
 
-	$spip_mots_liens = array(
+	$spip_mots_liens = [
 		'id_mot' => "bigint(21) DEFAULT '0' NOT NULL",
 		'id_objet' => "bigint(21) DEFAULT '0' NOT NULL",
 		'objet' => "VARCHAR (25) DEFAULT '' NOT NULL"
-	);
+	];
 
-	$spip_mots_liens_key = array(
+	$spip_mots_liens_key = [
 		'PRIMARY KEY' => 'id_mot,id_objet,objet',
 		'KEY id_mot' => 'id_mot',
 		'KEY id_objet' => 'id_objet',
 		'KEY objet' => 'objet',
-	);
+	];
 
 	$tables_auxiliaires['spip_mots_liens'] =
-		array('field' => &$spip_mots_liens, 'key' => &$spip_mots_liens_key);
+		['field' => &$spip_mots_liens, 'key' => &$spip_mots_liens_key];
 
 	return $tables_auxiliaires;
 }
@@ -90,9 +90,9 @@ function mots_declarer_tables_auxiliaires($tables_auxiliaires) {
  *     Description complétée des tables
  */
 function mots_declarer_tables_objets_sql($tables) {
-	$tables['spip_mots'] = array(
+	$tables['spip_mots'] = [
 		'type' => 'mot',
-		'type_surnoms' => array('mot-cle'), // pour les icones...
+		'type_surnoms' => ['mot-cle'], // pour les icones...
 		'texte_retour' => 'icone_retour',
 		'texte_objets' => 'public:mots_clefs',
 		'texte_objet' => 'public:mots_clef',
@@ -107,7 +107,7 @@ function mots_declarer_tables_objets_sql($tables) {
 		'titre' => "titre, '' AS lang",
 		'date' => 'date',
 		'principale' => 'oui',
-		'field' => array(
+		'field' => [
 			'id_mot' => 'bigint(21) NOT NULL',
 			'titre' => "text DEFAULT '' NOT NULL",
 			'descriptif' => "text DEFAULT '' NOT NULL",
@@ -115,35 +115,35 @@ function mots_declarer_tables_objets_sql($tables) {
 			'id_groupe' => 'bigint(21) DEFAULT 0 NOT NULL',
 			'type' => "text DEFAULT '' NOT NULL",
 			'maj' => 'TIMESTAMP'
-		),
-		'key' => array(
+		],
+		'key' => [
 			'PRIMARY KEY' => 'id_mot',
 			'KEY id_groupe' => 'id_groupe'
-		),
-		'parent' => array('type' => 'groupe_mot', 'champ' => 'id_groupe'),
-		'rechercher_champs' => array(
+		],
+		'parent' => ['type' => 'groupe_mot', 'champ' => 'id_groupe'],
+		'rechercher_champs' => [
 			'titre' => 8,
 			'texte' => 1,
 			'descriptif' => 5
-		),
-		'tables_jointures' => array(#'mots_liens' // declare generiquement ci dessous
-		),
-		'champs_editables' => array(
+		],
+		'tables_jointures' => [#'mots_liens' // declare generiquement ci dessous
+		],
+		'champs_editables' => [
 			'titre',
 			'descriptif',
 			'texte',
 			'id_groupe',
-		),
-		'champs_versionnes' => array(
+		],
+		'champs_versionnes' => [
 			'titre',
 			'descriptif',
 			'texte',
 			'id_groupe'
-		),
-	);
+		],
+	];
 
-	$tables['spip_groupes_mots'] = array(
-		'table_objet_surnoms' => array(
+	$tables['spip_groupes_mots'] = [
+		'table_objet_surnoms' => [
 			'groupemot',
 			'groupe_mots'
 			/*hum*/,
@@ -151,9 +151,9 @@ function mots_declarer_tables_objets_sql($tables) {
 			/* hum*/,
 			'groupe'
 			/*hum (EXPOSE)*/
-		),
+		],
 		'type' => 'groupe_mots',
-		'type_surnoms' => array('groupes_mot', 'groupemot', 'groupe_mot'),
+		'type_surnoms' => ['groupes_mot', 'groupemot', 'groupe_mot'],
 		'texte_retour' => 'icone_retour',
 		'texte_objets' => 'mots:titre_groupes_mots',
 		'texte_objet' => 'mots:titre_groupe_mots',
@@ -166,7 +166,7 @@ function mots_declarer_tables_objets_sql($tables) {
 		'titre' => "titre, '' AS lang",
 		'principale' => 'oui',
 		'page' => '', // pas de page publique pour les groupes
-		'field' => array(
+		'field' => [
 			'id_groupe' => 'bigint(21) NOT NULL',
 			'titre' => "text DEFAULT '' NOT NULL",
 			'descriptif' => "text DEFAULT '' NOT NULL",
@@ -178,19 +178,19 @@ function mots_declarer_tables_objets_sql($tables) {
 			'comite' => "varchar(3) DEFAULT '' NOT NULL",
 			'forum' => "varchar(3) DEFAULT '' NOT NULL",
 			'maj' => 'TIMESTAMP'
-		),
-		'key' => array(
+		],
+		'key' => [
 			'PRIMARY KEY' => 'id_groupe'
-		),
-		'rechercher_champs' => array(
+		],
+		'rechercher_champs' => [
 			'titre' => 8,
 			'texte' => 1,
 			'descriptif' => 5
-		),
-		'tables_jointures' => array(
+		],
+		'tables_jointures' => [
 			'mots'
-		),
-		'champs_editables' => array(
+		],
+		'champs_editables' => [
 			'titre',
 			'descriptif',
 			'texte',
@@ -200,8 +200,8 @@ function mots_declarer_tables_objets_sql($tables) {
 			'comite',
 			'forum',
 			'minirezo',
-		),
-		'champs_versionnes' => array(
+		],
+		'champs_versionnes' => [
 			'titre',
 			'descriptif',
 			'texte',
@@ -211,8 +211,8 @@ function mots_declarer_tables_objets_sql($tables) {
 			'minirezo',
 			'forum',
 			'comite',
-		),
-	);
+		],
+	];
 
 	// jointures sur les mots pour tous les objets
 	$tables[]['tables_jointures'][] = 'mots_liens';
@@ -227,7 +227,7 @@ function mots_declarer_tables_objets_sql($tables) {
 
 
 	// recherche jointe sur les mots pour tous les objets
-	$tables[]['rechercher_jointures']['mot'] = array('titre' => 3);
+	$tables[]['rechercher_jointures']['mot'] = ['titre' => 3];
 	// versionner les jointures pour tous les objets
 	$tables[]['champs_versionnes'][] = 'jointure_mots';
 

@@ -51,7 +51,7 @@ function action_editer_mot_dist($arg = null) {
 		$err = mot_modifier($id_mot);
 	}
 
-	return array($id_mot, $err);
+	return [$id_mot, $err];
 }
 
 /**
@@ -68,7 +68,7 @@ function action_editer_mot_dist($arg = null) {
  */
 function mot_inserer($id_groupe, $set = null) {
 
-	$champs = array();
+	$champs = [];
 	$row = sql_fetsel('titre', 'spip_groupes_mots', 'id_groupe=' . intval($id_groupe));
 	if ($row) {
 		$champs['id_groupe'] = $id_groupe;
@@ -84,25 +84,25 @@ function mot_inserer($id_groupe, $set = null) {
 	// Envoyer aux plugins
 	$champs = pipeline(
 		'pre_insertion',
-		array(
-			'args' => array(
+		[
+			'args' => [
 				'table' => 'spip_mots',
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 	$id_mot = sql_insertq('spip_mots', $champs);
 
 	pipeline(
 		'post_insertion',
-		array(
-			'args' => array(
+		[
+			'args' => [
 				'table' => 'spip_mots',
 				'id_objet' => $id_mot
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 	return $id_mot;
@@ -128,24 +128,26 @@ function mot_modifier($id_mot, $set = null) {
 		// white list
 		objet_info('mot', 'champs_editables'),
 		// black list
-		array('id_groupe'),
+		['id_groupe'],
 		// donnees eventuellement fournies
 		$set
 	);
 
-	if ($err = objet_modifier_champs(
-		'mot',
-		$id_mot,
-		array(
+	if (
+		$err = objet_modifier_champs(
+			'mot',
+			$id_mot,
+			[
 			'data' => $set,
-			'nonvide' => array('titre' => _T('info_sans_titre'))
-		),
-		$c
-	)) {
+			'nonvide' => ['titre' => _T('info_sans_titre')]
+			],
+			$c
+		)
+	) {
 		return $err;
 	}
 
-	$c = collecter_requests(array('id_groupe', 'type'), array(), $set);
+	$c = collecter_requests(['id_groupe', 'type'], [], $set);
 	$err = mot_instituer($id_mot, $c);
 
 	return $err;
@@ -165,7 +167,7 @@ function mot_modifier($id_mot, $set = null) {
  *     Null si aucun champ à modifier, chaîne vide sinon.
  */
 function mot_instituer($id_mot, $c) {
-	$champs = array();
+	$champs = [];
 	// regler le groupe
 	if (isset($c['id_groupe']) or isset($c['type'])) {
 		$row = sql_fetsel('titre', 'spip_groupes_mots', 'id_groupe=' . intval($c['id_groupe']));
@@ -178,14 +180,14 @@ function mot_instituer($id_mot, $c) {
 	// Envoyer aux plugins
 	$champs = pipeline(
 		'pre_edition',
-		array(
-			'args' => array(
+		[
+			'args' => [
 				'table' => 'spip_mots',
 				'id_objet' => $id_mot,
 				'action' => 'instituer',
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 	if (!$champs) {
@@ -205,20 +207,22 @@ function mot_instituer($id_mot, $c) {
 	// Pipeline
 	pipeline(
 		'post_edition',
-		array(
-			'args' => array(
+		[
+			'args' => [
 				'table' => 'spip_mots',
 				'id_objet' => $id_mot,
 				'action' => 'instituer',
-			),
+			],
 			'data' => $champs
-		)
+		]
 	);
 
 	// Notifications
 	if ($notifications = charger_fonction('notifications', 'inc')) {
-		$notifications('instituermot', $id_mot,
-			array('id_groupe' => $champs['id_groupe'])
+		$notifications(
+			'instituermot',
+			$id_mot,
+			['id_groupe' => $champs['id_groupe']]
 		);
 	}
 
@@ -239,9 +243,9 @@ function mot_supprimer($id_mot) {
 	mot_dissocier($id_mot, '*');
 	pipeline(
 		'trig_supprimer_objets_lies',
-		array(
-			array('type' => 'mot', 'id' => $id_mot)
-		)
+		[
+			['type' => 'mot', 'id' => $id_mot]
+		]
 	);
 }
 
@@ -283,10 +287,10 @@ function mot_associer($id_mot, $objets, $qualif = null) {
 	if (un_seul_mot_dans_groupe($id_groupe)) {
 		$mots_groupe = sql_allfetsel('id_mot', 'spip_mots', 'id_groupe=' . intval($id_groupe));
 		$mots_groupe = array_column($mots_groupe, 'id_mot');
-		objet_dissocier(array('mot' => $mots_groupe), $objets);
+		objet_dissocier(['mot' => $mots_groupe], $objets);
 	}
 
-	return objet_associer(array('mot' => $id_mot), $objets, $qualif);
+	return objet_associer(['mot' => $id_mot], $objets, $qualif);
 }
 
 
@@ -309,7 +313,7 @@ function mot_associer($id_mot, $objets, $qualif = null) {
 function mot_dissocier($id_mot, $objets) {
 	include_spip('action/editer_liens');
 
-	return objet_dissocier(array('mot' => $id_mot), $objets);
+	return objet_dissocier(['mot' => $id_mot], $objets);
 }
 
 /**
@@ -338,7 +342,7 @@ function mot_dissocier($id_mot, $objets) {
 function mot_qualifier($id_mot, $objets, $qualif) {
 	include_spip('action/editer_liens');
 
-	return objet_qualifier(array('mot' => $id_mot), $objets, $qualif);
+	return objet_qualifier(['mot' => $id_mot], $objets, $qualif);
 }
 
 

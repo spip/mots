@@ -37,14 +37,14 @@ include_spip('base/abstract_sql');
  *     Tableau de textes indiquant le nombre d'éléments tel que '3 articles'
  **/
 function filtre_objets_associes_mot_dist($id_mot, $id_groupe) {
-	static $occurrences = array();
+	static $occurrences = [];
 
 	// calculer tous les liens du groupe d'un coup
 	if (!isset($occurrences[$id_groupe])) {
 		$occurrences[$id_groupe] = calculer_utilisations_mots($id_groupe);
 	}
 
-	$associes = array();
+	$associes = [];
 	$tables = lister_tables_objets_sql();
 	foreach ($tables as $table_objet_sql => $infos) {
 		$nb = (isset($occurrences[$id_groupe][$table_objet_sql][$id_mot]) ? $occurrences[$id_groupe][$table_objet_sql][$id_mot] : 0);
@@ -55,12 +55,11 @@ function filtre_objets_associes_mot_dist($id_mot, $id_groupe) {
 
 	$associes = pipeline(
 		'afficher_nombre_objets_associes_a',
-		array('args' => array('objet' => 'mot', 'id_objet' => $id_mot),
-		'data' => $associes)
+		['args' => ['objet' => 'mot', 'id_objet' => $id_mot],
+		'data' => $associes]
 	);
 
 	return $associes;
-
 }
 
 /**
@@ -74,11 +73,11 @@ function filtre_objets_associes_mot_dist($id_mot, $id_groupe) {
  *     Mots est un tableau de couples (id_mot => nombre d'utilisation)
  */
 function calculer_utilisations_mots($id_groupe) {
-	$retour = array();
+	$retour = [];
 	$objets = sql_allfetsel(
 		'DISTINCT objet',
-		array('spip_mots_liens AS L', 'spip_mots AS M'),
-		array('L.id_mot=M.id_mot', 'M.id_groupe=' . intval($id_groupe))
+		['spip_mots_liens AS L', 'spip_mots AS M'],
+		['L.id_mot=M.id_mot', 'M.id_groupe=' . intval($id_groupe)]
 	);
 
 	foreach ($objets as $o) {
@@ -112,7 +111,7 @@ function calculer_utilisations_mots($id_groupe) {
 				else {
 					$statuts = ' AND ' . sql_in(
 						"O.$c_statut",
-						($GLOBALS['connect_statut'] == '0minirezo') ? array('prepa', 'prop', 'publie') : array('prop', 'publie')
+						($GLOBALS['connect_statut'] == '0minirezo') ? ['prepa', 'prop', 'publie'] : ['prop', 'publie']
 					);
 				}
 			}
