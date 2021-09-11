@@ -165,12 +165,12 @@ function formulaires_editer_groupe_mot_traiter_dist(
 	// cas des checkbox : injecter la valeur non si rien de coche
 	foreach (
 		[
-				 'obligatoire',
-				 'unseul',
-				 'comite',
-				 'forum',
-				 'minirezo'
-			 ] as $champ
+			'obligatoire',
+			'unseul',
+			'comite',
+			'forum',
+			'minirezo'
+		] as $champ
 	) {
 		if (!_request($champ)) {
 			set_request($champ, 'non');
