@@ -30,10 +30,10 @@ include_spip('inc/presentation');
 function formulaires_configurer_mots_charger_dist() {
 	foreach (
 		[
-				'articles_mots',
-				'config_precise_groupes',
-				'mots_cles_forums',
-			] as $m
+			'articles_mots',
+			'config_precise_groupes',
+			'mots_cles_forums',
+		] as $m
 	) {
 		$valeurs[$m] = $GLOBALS['meta'][$m];
 	}
@@ -51,10 +51,10 @@ function formulaires_configurer_mots_traiter_dist() {
 	$res = ['editable' => true];
 	foreach (
 		[
-				'articles_mots',
-				'config_precise_groupes',
-				'mots_cles_forums',
-			] as $m
+			'articles_mots',
+			'config_precise_groupes',
+			'mots_cles_forums',
+		] as $m
 	) {
 		if (!is_null($v = _request($m))) {
 			ecrire_meta($m, $v == 'oui' ? 'oui' : 'non');

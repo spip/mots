@@ -148,12 +148,12 @@ function groupe_mots_modifier($id_groupe, $set = null) {
 	// normaliser les champ oui/non
 	foreach (
 		[
-				'obligatoire',
-				'unseul',
-				'comite',
-				'forum',
-				'minirezo'
-			] as $champ
+			'obligatoire',
+			'unseul',
+			'comite',
+			'forum',
+			'minirezo'
+		] as $champ
 	) {
 		if (isset($c[$champ])) {
 			$c[$champ] = ($c[$champ] == 'oui' ? 'oui' : 'non');
