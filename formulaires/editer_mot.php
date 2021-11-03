@@ -247,24 +247,15 @@ function formulaires_editer_mot_traiter_dist(
 	$row = [],
 	$hidden = ''
 ) {
-	$res = [];
 	set_request('redirect', '');
-	$action_editer = charger_fonction('editer_mot', 'action');
-	list($id_mot, $err) = $action_editer();
-	if ($err) {
-		$res['message_erreur'] = $err;
-	} else {
-		$res['message_ok'] = '';
-		$res['id_mot'] = $id_mot;
-		if ($retour) {
-			if (strncmp($retour, 'javascript:', 11) == 0) {
-				$res['message_ok'] .= '<script type="text/javascript">/*<![CDATA[*/' . substr($retour, 11) . '/*]]>*/</script>';
-				$res['editable'] = true;
-			} else {
-				$res['redirect'] = $retour;
-				if (strlen(parametre_url($retour, 'id_mot'))) {
-					$res['redirect'] = parametre_url($res['redirect'], 'id_mot', $id_mot);
-				}
+	$res = formulaires_editer_objet_traiter('mot', $id_mot, $id_groupe, 0, $retour, $config_fonc, $row, $hidden);
+
+	if (empty($res['message_erreur'])) {
+		$id_mot = $res['id_mot'];
+
+		if (!strncmp($retour, 'javascript:', 11) == 0){
+			if (!strlen(parametre_url($retour, 'id_mot'))){
+				$res['redirect'] = parametre_url($res['redirect'], 'id_mot', '');
 			}
 		}
 
