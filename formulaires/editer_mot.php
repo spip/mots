@@ -81,8 +81,9 @@ function formulaires_editer_mot_charger_dist(
 
 	// Si nouveau et titre dans l'url : fixer le titre
 	if (
-		$id_mot == 'oui'
-		and strlen($titre = _request('titre'))
+		$id_mot === 'oui'
+		and $titre = _request('titre')
+		and strlen($titre)
 	) {
 		$valeurs['titre'] = $titre;
 	}
