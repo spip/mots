@@ -47,7 +47,7 @@ function filtre_objets_associes_mot_dist($id_mot, $id_groupe) {
 	$associes = [];
 	$tables = lister_tables_objets_sql();
 	foreach ($tables as $table_objet_sql => $infos) {
-		$nb = (isset($occurrences[$id_groupe][$table_objet_sql][$id_mot]) ? $occurrences[$id_groupe][$table_objet_sql][$id_mot] : 0);
+		$nb = ($occurrences[$id_groupe][$table_objet_sql][$id_mot] ?? 0);
 		if ($nb) {
 			$associes[] = objet_afficher_nb($nb, $infos['type']);
 		}
@@ -92,7 +92,7 @@ function calculer_utilisations_mots($id_groupe) {
 			if (isset($infos['field']['statut']) or isset($infos['statut'][0]['champ'])) {
 				// on s'approche au mieux de la declaration de l'objet.
 				// il faudrait ameliorer ce point.
-				$c_statut = isset($infos['statut'][0]['champ']) ? $infos['statut'][0]['champ'] : 'statut';
+				$c_statut = $infos['statut'][0]['champ'] ?? 'statut';
 
 				// bricoler les statuts d'apres la declaration de l'objet (champ previsu a defaut de mieux)
 				if (

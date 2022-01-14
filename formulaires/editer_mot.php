@@ -74,7 +74,7 @@ function formulaires_editer_mot_charger_dist(
 			$objet = 'article';
 			$id_objet = intval($associer_objet);
 		} else {
-			list($objet, $id_objet) = explode('|', $associer_objet);
+			[$objet, $id_objet] = explode('|', $associer_objet);
 		}
 	}
 	$valeurs['table'] = ($associer_objet ? table_objet($objet) : '');
@@ -196,7 +196,7 @@ function formulaires_editer_mot_verifier_dist(
 		or supprimer_numero(_request('titre'))
 			!== supprimer_numero(sql_getfetsel('titre', 'spip_mots', 'id_mot=' . intval($id_mot)))
 	) {
-		if (!count($erreurs) and !_request('confirm_titre_mot')) {
+		if (!(is_countable($erreurs) ? count($erreurs) : 0) and !_request('confirm_titre_mot')) {
 			if (
 				sql_countsel(
 					'spip_mots',
@@ -266,7 +266,7 @@ function formulaires_editer_mot_traiter_dist(
 				$objet = 'article';
 				$id_objet = intval($associer_objet);
 			} else {
-				list($objet, $id_objet) = explode('|', $associer_objet);
+				[$objet, $id_objet] = explode('|', $associer_objet);
 			}
 			if ($objet and $id_objet and autoriser('modifier', $objet, $id_objet)) {
 				include_spip('action/editer_mot');

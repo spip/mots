@@ -107,7 +107,7 @@ function admot_recupere_id_mot($name) {
 }
 
 function admot_associer_objets_mot($id_mot, $objet, $ids) {
-	if (count($ids)) {
+	if (is_countable($ids) ? count($ids) : 0) {
 		$couples = [];
 		foreach ($ids as $id) {
 			$couples[] = [
@@ -122,7 +122,7 @@ function admot_associer_objets_mot($id_mot, $objet, $ids) {
 }
 
 function admot_dissocier_objets_mot($id_mot, $objet, $ids) {
-	if (count($ids)) {
+	if (is_countable($ids) ? count($ids) : 0) {
 		return sql_delete('spip_mots_liens', 'id_mot=' . intval($id_mot) . ' AND objet=' . sql_quote($objet) . ' AND ' . sql_in('id_objet', $ids));
 	}
 	return false;
@@ -131,13 +131,14 @@ function admot_dissocier_objets_mot($id_mot, $objet, $ids) {
 
 function formulaires_administrer_mot_traiter_dist($id_mot) {
 
+	$res = [];
 	refuser_traiter_formulaire_ajax();
 	if (_request('revert')) {
 		$action = _request('revert_action');
 		$action = explode('/', $action);
 		$quoi = array_shift($action);
 		foreach ($action as $a) {
-			list($objet, $ids) = explode(':', $a);
+			[$objet, $ids] = explode(':', $a);
 			$ids = explode(',', $ids);
 			if ($objet and $ids) {
 				if ($quoi == 'add') {
@@ -164,7 +165,7 @@ function formulaires_administrer_mot_traiter_dist($id_mot) {
 		}
 		$id = admot_recupere_id_mot($check);
 
-		$revert = '';
+		$revert = [];
 		$res = [];
 		// associer
 		if ($check == 'associer_objets_mot') {
