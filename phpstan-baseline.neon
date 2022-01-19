@@ -351,12 +351,12 @@ parameters:
 			path: formulaires/editer_mot.php
 
 		-
-			message: "#^Function charger_fonction not found\\.$#"
+			message: "#^Function formulaires_editer_objet_charger not found\\.$#"
 			count: 1
 			path: formulaires/editer_mot.php
 
 		-
-			message: "#^Function formulaires_editer_objet_charger not found\\.$#"
+			message: "#^Function formulaires_editer_objet_traiter not found\\.$#"
 			count: 1
 			path: formulaires/editer_mot.php
 
