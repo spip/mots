@@ -13,7 +13,7 @@
 	<h1>(#ENV{titre,#INFO_TITRE{mot,#ID_MOT}|sinon{<:mots:texte_nouveau_mot:>}})</h1>]
 </div>
 
-#SET{redirect,#ENV{redirect,#ID_MOT|generer_url_entite{mot}}}
+#SET{redirect,#ENV{redirect,#ID_MOT|generer_objet_url{mot}}}
 [(#ENV{retourajax,''}|oui)
 	#SET{redirect,'javascript:if (window.jQuery) jQuery(".entete-formulaire .retour a").followLink();'}
 	<div class="ajax">

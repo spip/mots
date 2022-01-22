@@ -232,7 +232,7 @@ function formulaires_administrer_mot_traiter_dist($id_mot) {
 				sql_insertq('spip_mots_liens', $a);
 			}
 			sql_delete('spip_mots_liens', 'id_mot=' . $id_mot);
-			$link = "<a href='" . generer_url_entite($id, 'mot') . "'>" . objet_info('mot', 'texte_objet') . " #$id</a>";
+			$link = "<a href='" . generer_objet_url($id, 'mot') . "'>" . objet_info('mot', 'texte_objet') . " #$id</a>";
 			$res['message_ok'] = _T('adminmots:result_fusionner_ok', ['mot' => $link]);
 		}
 

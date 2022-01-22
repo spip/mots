@@ -23,7 +23,7 @@ Ce squelette n'est utile que pour l'affichage éventuel de résultats du moteur 
 	<BOUCLE_liste_groupe_mots(GROUPES_MOTS){id_?}{where?}{recherche?}{tri #ENV{par,num titre},#GET{defaut_tri}}{par titre}{pagination #ENV{nb,10}}>
 		<tr class="[(#COMPTEUR_BOUCLE|alterner{row_odd,row_even})]">
 			<td class='picto'>[(#VAL|puce_statut{groupe_mots,#ID_GROUPE,#ID_GROUPE})]</td>
-			<td class='titre principale'[(#LOGO_GROUPE_MOT|non) colspan='2']><a href="[(#ID_GROUPE|generer_url_entite{groupemot})]" title="<:info_numero_abbreviation|attribut_html:> #ID_GROUPE">[(#RANG). ]#TITRE</a></td>
+			<td class='titre principale'[(#LOGO_GROUPE_MOT|non) colspan='2']><a href="[(#ID_GROUPE|generer_objet_url{groupemot})]" title="<:info_numero_abbreviation|attribut_html:> #ID_GROUPE">[(#RANG). ]#TITRE</a></td>
 			[<td class='logo'>(#LOGO_GROUPE_MOT|image_reduire{40,40})</td>]
 			<td class='id'>[(#AUTORISER{modifier,groupemots,#ID_GROUPE}|?{
 				<a href="[(#URL_ECRIRE{groupe_mots_edit,id_groupe=#ID_GROUPE})]" title="<:mots:icone_modif_groupe_mots|attribut_html:>">#ID_GROUPE</a>,
