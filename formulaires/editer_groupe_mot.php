@@ -100,11 +100,10 @@ function formulaires_editer_groupe_mot_identifier_dist(
  *     Configuration pour le formulaire
  */
 function groupes_mots_edit_config($row) {
-	global $spip_ecran, $spip_lang;
 
-	$config = $GLOBALS['meta'];
-	$config['lignes'] = ($spip_ecran == 'large') ? 8 : 5;
-	$config['langue'] = $spip_lang;
+	$config = [];
+	$config['lignes'] = ($GLOBALS['spip_ecran'] == 'large') ? 8 : 5;
+	$config['langue'] = $GLOBALS['spip_lang'];
 
 	return $config;
 }
