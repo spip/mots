@@ -99,7 +99,7 @@ function formulaires_editer_groupe_mot_identifier_dist(
  * return array
  *     Configuration pour le formulaire
  */
-function groupes_mots_edit_config($row) {
+function groupes_mots_edit_config(array $row): array {
 
 	$config = [];
 	$config['lignes'] = ($GLOBALS['spip_ecran'] == 'large') ? 8 : 5;
