@@ -54,7 +54,7 @@ function mots_upgrade($nom_meta_base_version, $version_cible) {
 	$maj['1.0.0'] = [
 		['maj_tables', ['spip_groupes_mots', 'spip_mots', 'spip_mots_liens']],
 	];
-	include_spip('maj/svn10000');
+	include_spip('maj/legacy/svn10000');
 	$maj['2.0.0'] = [
 		['maj_liens', 'mot'], // creer la table liens
 		['maj_liens', 'mot', 'breve'],

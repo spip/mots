@@ -7,6 +7,10 @@
 
 - Fichier `CHANGELOG.md`
 
+### Fixed
+
+- #4797 Réparer la mise à jour du plugin depuis un vieux SPIP vers la version 4
+
 
 ## [4.0.2] - 2022-03-25
 
