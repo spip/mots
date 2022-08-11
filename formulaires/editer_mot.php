@@ -141,7 +141,7 @@ function formulaires_editer_mot_identifier_dist(
 function mots_edit_config(array $row): array {
 
 	$config = [];
-	$config['lignes'] = ($GLOBALS['spip_ecran'] == 'large') ? 8 : 5;
+	$config['lignes'] = 8;
 	$config['langue'] = $GLOBALS['spip_lang'];
 	$config['restreint'] = false;
 
