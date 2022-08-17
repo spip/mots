@@ -254,7 +254,7 @@ function formulaires_editer_mot_traiter_dist(
 		$id_mot = $res['id_mot'];
 
 		if (!strncmp($retour, 'javascript:', 11) == 0) {
-			if (!strlen(parametre_url($retour, 'id_mot'))) {
+			if (!strlen(parametre_url($retour, 'id_mot') ?? '')) {
 				$res['redirect'] = parametre_url($res['redirect'], 'id_mot', '');
 			}
 		}
